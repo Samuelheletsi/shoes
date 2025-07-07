@@ -1,0 +1,371 @@
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+  background-color: #fefefe;
+  color: #333;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+/* Fade animations */
+.fade-in {
+  animation: fadeIn 0.4s ease-in-out;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.image-slider {
+  opacity: 0;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+/* Navbar */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  align-items: center;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+.menu-icon {
+  width: 20px;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+.brand-name {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.select {
+  display: flex;
+  gap: 1rem;
+  margin-left: 30px;
+}
+.select div a {
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+}
+.select div:hover {
+  border-bottom: 4px solid orange;
+}
+.nav-right {
+  display: flex;
+  gap: 1.2rem;
+}
+.nav-icon {
+  width: 30px;
+  cursor: pointer;
+}
+.cart-icon-container {
+  position: relative;
+}
+.cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+/* Main Page */
+.sneaker-page {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #fff;
+}
+.sneaker-gallery {
+  position: relative;
+  margin-right: 2rem;
+}
+.product-image {
+  width: 22rem;
+  height: auto;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.gallery-nav {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.5rem;
+  pointer-events: none;
+}
+.gallery-nav button {
+  background: white;
+  border: none;
+  border-radius: 50%;
+  padding: 0.8rem;
+  cursor: pointer;
+  pointer-events: auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+.gallery-pic {
+  display: flex;
+  justify-content: space-between;
+  width: 22rem;
+  margin-top: 1rem;
+}
+.gallery-pic img {
+  width: 60px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.gallery-pic img:hover {
+  border: 2px solid orange;
+  opacity: 0.6;
+}
+
+/* Product Details */
+.sneaker-details {
+  max-width: 400px;
+}
+.company-name {
+  color: hsl(219, 9%, 45%);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+}
+.product-title {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+}
+.product-description {
+  color: hsl(219, 9%, 45%);
+  margin: 1rem 0;
+  line-height: 1.5;
+}
+.price-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.price-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.price {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.discount {
+  background-color: black;
+  color: white;
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+}
+.original-price {
+  text-decoration: line-through;
+  color: hsl(219, 12%, 41%);
+}
+
+/* Buttons and Inputs */
+.buts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.quantity-section,
+.add-cart {
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+}
+.quantity-section {
+  background-color: hsl(223, 64%, 98%);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.quantity-section button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.quantity {
+  font-weight: bold;
+  font-size: 1rem;
+}
+.add-cart {
+  background-color: hsl(26, 100%, 55%);
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+.add-cart:hover {
+  background-color: hsl(26, 100%, 60%);
+}
+.add-cart img {
+  filter: brightness(0) invert(1);
+}
+
+/* Cart */
+.cart {
+  width: 300px;
+  position: absolute;
+  top: 70px;
+  right: 50px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  background-color: white;
+  padding: 20px;
+  z-index: 200;
+  border-radius: 10px;
+}
+.cart .des {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.cart .des img {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+}
+.cart .des p {
+  font-size: 0.9rem;
+}
+.cart .des span {
+  font-size: 0.85rem;
+  color: gray;
+}
+.cart button {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 8px;
+  background-color: hsl(26, 100%, 55%);
+  color: white;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease-in-out;
+}
+.lightbox-content {
+  position: relative;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 22rem;
+}
+.lightbox-content img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+.close-lightbox {
+  position: absolute;
+  top: -30px;
+  right: -10px;
+  font-size: 28px;
+  border: none;
+  background: none;
+  color: white;
+  cursor: pointer;
+}
+.lightbox-content .gallery-pic img {
+  width: 50px;
+  border-radius: 7px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+.lightbox-content .gallery-pic img:hover {
+  border: 2px solid orange;
+  opacity: 0.6;
+}
+
+/* Toast */
+.toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: black;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  z-index: 999;
+  animation: fadeInOut 2s ease;
+}
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(20px); }
+  10%, 90% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-20px); }
+}
+
+#delete-icon {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+#delete-icon:hover {
+  transform: scale(1.2);
+  filter: brightness(0.8);
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sneaker-page {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .sneaker-gallery {
+    margin-right: 0;
+  }
+  .gallery-pic,
+  .select {
+    display: none;
+  }
+  .add-cart {
+    width: 100%;
+  }
+  
+  .quantity-section {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
